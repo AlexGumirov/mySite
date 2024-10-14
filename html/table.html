@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список хоккеистов</title>
+</head>
+<body>
+    <div>
+        <h1 align="center">Список хоккеистов</h1>
+        <div align="center">
+            <a href="../index.html">Лучшие хоккеисты современности</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="list.html">Топ-7 хоккеистов современности</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="table.html">Список хоккеистов</a>
+            
+        </div>
+    
+    <hr>
+    <details>
+        <summary>График</summary>
+        <form action="#">
+        <table cellspacing="20">
+            <tr>
+                <td><b>Значение по оси ОХ</b></td>
+                <td><b>Результат</b></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="name" id="country1"> 
+                    <label for="country1">Страна</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="team1" id="team1"> 
+                    <label for="team1">Голы min</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="name" id="location1"> 
+                    <label for="location1">Позиция</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="game1" id="game1"> 
+                    <label for="game1">Голы max</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="name" id="goal1"> 
+                    <label for="goal1">Команда</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="parent1" id="parent1"> 
+                    <label for="parent1">Голы ср</label>
+                </td>
+            </tr>
+        </table>
+        <button>Построить</button>
+    </form>
+    <p>Здесь будет график</p>
+    <br>
+    </details>
+
+    <details>
+        <summary>Фильтр</summary>
+        <form action="#">
+            
+            <label for="name">Имя</label>
+            <input type="text" name="name" id="name">
+            <br>
+            <label for="goal_min">Голы от:</label>
+            <input type="text" name="goal_min" id="goal_min"> <label for="goal_max">до: </label> <input type="text" name="goal_max" id="goal_max"> 
+            <br>
+            <label for="country">Страна</label>
+            <input type="text" name="country" id="country">
+            <br>
+            <label for="first">Позиция</label>
+            <input type="text" name="first" id="first">
+            <br>
+            <label for="game_min">Игры от:</label>
+            <input type="text" name="game_min" id="game_min"> <label for="game_max">до: </label> <input type="text" name="game_max" id="game_max"> 
+            <br>
+            <label for="team">Команда</label>
+            <input type="text" name="team" id="team">
+            <br>
+            <button>Найти</button>
+        </form>
+        <p>Здесь будет таблица с результатом</p>
+    </details>
+
+
+    <details>
+        <summary>Сортировка</summary>
+        <form action="#">
+            <p>Первый уровень:
+                <select name="sort">
+                    <option value="0">Имя</option>
+                    <option value="1">Голы</option>
+                    <option value="2">Игры</option>
+                    <option value="3">Страна</option>
+                    <option value="4">Позиция</option>
+                    <option value="5">Команда</option>
+                    <option value="6" selected>Нет</option>
+
+                </select>
+                <label for="direction">По возрастанию?</label>
+                <input type="checkbox" name="direction" id="direction">              
+            </p>
+            <form action="#">
+                <p>Второй уровень:
+                    <select name="sort">
+                        <option value="0">Имя</option>
+                        <option value="1">Голы</option>
+                        <option value="2">Игры</option>
+                        <option value="3">Страна</option>
+                        <option value="4">Позиция</option>
+                        <option value="5">Команда</option>
+                        <option value="6" selected>Нет</option>
+                    </select>
+                    <label for="direction">По возрастанию?</label>
+                    <input type="checkbox" name="direction" id="direction">              
+                </p>
+                <form action="#">
+                    <p>Третий уровень:
+                        <select name="sort">
+                            <option value="0">Имя</option>
+                            <option value="1">Голы</option>
+                            <option value="2">Игры</option>
+                            <option value="3">Страна</option>
+                            <option value="4">Позиция</option>
+                            <option value="5">Команда</option>
+                            <option value="6" selected>Нет</option>
+                        </select>
+                        <label for="direction">По возрастанию?</label>
+                        <input type="checkbox" name="direction" id="direction">              
+                    </p>
+            <button>Сортировать</button>
+        </form>
+        <br>
+        Здесь будет результат сортировки
+    </details>
+    <br>
+    <table border="1" cellspacing="0" cellpadding="7">
+        <tr align="center">
+            <td><b>Имя</b></td>
+            <td><b>Голы (м)</b></td>
+            <td><b>Игры</b></td>
+            <td><b>Страна</b></td>
+            <td><b>Позиция</b></td>
+            <td><b>Команда</b></td>
+        </tr>
+        <tr>
+            <td>Александр Овечкин</td>
+            <td>853</td>
+            <td>1426</td>
+            <td>Россия</td>
+            <td>Нападающий</td>
+            <td>Вашингтон Кэпиталс</td>
+        </tr>
+        <tr>
+            <td>Сидни Кросби</td>
+            <td>541</td>
+            <td>1144</td>
+            <td>Канада</td>
+            <td>Нападающий</td>
+            <td>Питтсбург Пингвинз</td>
+        </tr>
+        <tr>
+            <td>Стивен Стэмкос</td>
+            <td>515</td>
+            <td>911</td>
+            <td>Канада</td>
+            <td>Нападающий</td>
+            <td>Тампа-Бэй Лайтнинг</td>
+        </tr>
+        <tr>
+            <td>Коннор Макдэвид</td>
+            <td>303</td>
+            <td>527</td>
+            <td>Канада</td>
+            <td>Нападающий</td>
+            <td>Эдмонтон Ойлерз</td>
+        </tr>
+        <tr>
+            <td>Патрик Кейн</td>
+            <td>451</td>
+            <td>1107</td>
+            <td>США</td>
+            <td>Нападающий</td>
+            <td>Чикаго Блэкхокс</td>
+        </tr>
+        <tr>
+            <td>Леон Драйзайтль</td>
+            <td>326</td>
+            <td>631</td>
+            <td>Германия</td>
+            <td>Нападающий</td>
+            <td>Эдмонтон Ойлерз</td>
+        </tr>
+        <tr>
+            <td>Аустон Мэттьюс</td>
+            <td>299</td>
+            <td>458</td>
+            <td>США</td>
+            <td>Нападающий</td>
+            <td>Торонто Мэйпл Лифс</td>
+        </tr>
+        <tr>
+            <td>Никита Кучеров</td>
+            <td>285</td>
+            <td>581</td>
+            <td>Россия</td>
+            <td>Нападающий</td>
+            <td>Тампа-Бэй Лайтнинг</td>
+        </tr>
+        <tr>
+            <td>Габриэль Ландескуг</td>
+            <td>248</td>
+            <td>678</td>
+            <td>Швеция</td>
+            <td>Нападающий</td>
+            <td>Колорадо Эвеланш</td>
+        </tr>
+        <tr>
+            <td>Джон Таварес</td>
+            <td>416</td>
+            <td>899</td>
+            <td>Канада</td>
+            <td>Нападающий</td>
+            <td>Торонто Мэйпл Лифс</td>
+        </tr>
+        <tr>
+            <td>Мика Зибанежад</td>
+            <td>220</td>
+            <td>601</td>
+            <td>Швеция</td>
+            <td>Нападающий</td>
+            <td>Нью-Йорк Рейнджерс</td>
+        </tr>
+        <tr>
+            <td>Марк Шайфли</td>
+            <td>247</td>
+            <td>652</td>
+            <td>Канада</td>
+            <td>Нападающий</td>
+            <td>Виннипег Джетс</td>
+        </tr>
+        <tr>
+            <td>Давид Пастрняк</td>
+            <td>245</td>
+            <td>437</td>
+            <td>Чехия</td>
+            <td>Нападающий</td>
+            <td>Бостон Брюинз</td>
+        </tr>
+        <tr>
+            <td>Брэд Маршанд</td>
+            <td>351</td>
+            <td>820</td>
+            <td>Канада</td>
+            <td>Нападающий</td>
+            <td>Бостон Брюинз</td>
+        </tr>
+        <tr>
+            <td>Джейми Бенн</td>
+            <td>329</td>
+            <td>866</td>
+            <td>Канада</td>
+            <td>Нападающий</td>
+            <td>Даллас Старз</td>
+        </tr>
+        <tr>
+            <td>Артемий Панарин</td>
+            <td>191</td>
+            <td>457</td>
+            <td>Россия</td>
+            <td>Нападающий</td>
+            <td>Нью-Йорк Рейнджерс</td>
+        </tr>
+        <tr>
+            <td>Филипп Форсберг</td>
+            <td>226</td>
+            <td>549</td>
+            <td>Швеция</td>
+            <td>Нападающий</td>
+            <td>Нэшвилл Предаторз</td>
+        </tr>
+        <tr>
+            <td>Макс Пачиоретти</td>
+            <td>307</td>
+            <td>802</td>
+            <td>США</td>
+            <td>Нападающий</td>
+            <td>Вегас Голден Найтс</td>
+        </tr>
+        <tr>
+            <td>Владимир Тарасенко</td>
+            <td>232</td>
+            <td>531</td>
+            <td>Россия</td>
+            <td>Нападающий</td>
+            <td>Сент-Луис Блюз</td>
+        </tr>
+        <tr>
+            <td>Джон Карлсон</td>
+            <td>130</td>
+            <td>788</td>
+            <td>США</td>
+            <td>Защитник</td>
+            <td>Вашингтон Кэпиталс</td>
+        </tr>
+        <tr>
+            <td>Эрик Карлссон</td>
+            <td>157</td>
+            <td>738</td>
+            <td>Швеция</td>
+            <td>Защитник</td>
+            <td>Сан-Хосе Шаркс</td>
+        </tr>
+        <tr>
+            <td>Роман Йоси</td>
+            <td>128</td>
+            <td>763</td>
+            <td>Швейцария</td>
+            <td>Защитник</td>
+            <td>Нэшвилл Предаторз</td>
+        </tr>
+        <tr>
+            <td>Дрю Даути</td>
+            <td>127</td>
+            <td>1022</td>
+            <td>Канада</td>
+            <td>Защитник</td>
+            <td>Лос-Анджелес Кингз</td>
+        </tr>
+        <tr>
+            <td>Брендан Галахер</td>
+            <td>198</td>
+            <td>579</td>
+            <td>Канада</td>
+            <td>Нападающий</td>
+            <td>Монреаль Канадиенс</td>
+        </tr>
+        <tr>
+            <td>Томаш Хертл</td>
+            <td>163</td>
+            <td>537</td>
+            <td>Чехия</td>
+            <td>Нападающий</td>
+            <td>Сан-Хосе Шаркс</td>
+        </tr>
+        <tr>
+            <td>Энзе Копитар</td>
+            <td>352</td>
+            <td>1152</td>
+            <td>Словения</td>
+            <td>Нападающий</td>
+            <td>Лос-Анджелес Кингз</td>
+        </tr>
+        <tr>
+            <td>Ти Джей Оши</td>
+            <td>256</td>
+            <td>799</td>
+            <td>США</td>
+            <td>Нападающий</td>
+            <td>Вашингтон Кэпиталс</td>
+        </tr>
+        <tr>
+            <td>Джонатан Юбердо</td>
+            <td>181</td>
+            <td>656</td>
+            <td>Канада</td>
+            <td>Нападающий</td>
+            <td>Флорида Пантерз</td>
+        </tr>
+        <tr>
+            <td>Джейсон Спецца</td>
+            <td>363</td>
+            <td>1226</td>
+            <td>Канада</td>
+            <td>Нападающий</td>
+            <td>Торонто Мэйпл Лифс</td>
+        </tr>
+        <tr>
+            <td>Зах Паризе</td>
+            <td>393</td>
+            <td>1026</td>
+            <td>США</td>
+            <td>Нападающий</td>
+            <td>Миннесота Уайлд</td>
+        </tr>
+        <tr>
+            <td>Райан О'Райлли</td>
+            <td>198</td>
+            <td>811</td>
+            <td>Канада</td>
+            <td>Нападающий</td>
+            <td>Сент-Луис Блюз</td>
+        </tr>
+        <tr>
+            <td>Джейк Гюнцель</td>
+            <td>148</td>
+            <td>316</td>
+            <td>США</td>
+            <td>Нападающий</td>
+            <td>Питтсбург Пингвинз</td>
+        </tr>
+        <tr>
+            <td>Джон Клинберг</td>
+            <td>73</td>
+            <td>523</td>
+            <td>Швеция</td>
+            <td>Защитник</td>
+            <td>Даллас Старз</td>
+        </tr>
+        <tr>
+            <td>Шей Уэбер</td>
+            <td>224</td>
+            <td>1038</td>
+            <td>Канада</td>
+            <td>Защитник</td>
+            <td>Монреаль Канадиенс</td>
+        </tr>
+        <tr>
+            <td>Дастин Браун</td>
+            <td>312</td>
+            <td>1254</td>
+            <td>США</td>
+            <td>Нападающий</td>
+            <td>Лос-Анджелес Кингз</td>
+        </tr>
+        <tr>
+            <td>Мэтт Барзал</td>
+            <td>76</td>
+            <td>290</td>
+            <td>Канада</td>
+            <td>Нападающий</td>
+            <td>Нью-Йорк Айлендерс</td>
+        </tr>
+        <tr>
+            <td>Алекс Пьетранджело</td>
+            <td>126</td>
+            <td>758</td>
+            <td>Канада</td>
+            <td>Защитник</td>
+            <td>Вегас Голден Найтс</td>
+        </tr>
+        <tr>
+            <td>Крис Летанг</td>
+            <td>144</td>
+            <td>808</td>
+            <td>Канада</td>
+            <td>Защитник</td>
+            <td>Питтсбург Пингвинз</td>
+        </tr>
+        <tr>
+            <td>Джейк Муззин</td>
+            <td>71</td>
+            <td>637</td>
+            <td>Канада</td>
+            <td>Защитник</td>
+            <td>Торонто Мэйпл Лифс</td>
+        </tr>
+        <tr>
+            <td>Мэттью Ткачук</td>
+            <td>158</td>
+            <td>349</td>
+            <td>США</td>
+            <td>Нападающий</td>
+            <td>Калгари Флэймз</td>
+        </tr>
+        <tr>
+            <td>Чарли Макэвой</td>
+            <td>36</td>
+            <td>235</td>
+            <td>США</td>
+            <td>Защитник</td>
+            <td>Бостон Брюинз</td>
+        </tr>
+        <tr>
+            <td>Блэйк Уилер</td>
+            <td>290</td>
+            <td>956</td>
+            <td>США</td>
+            <td>Нападающий</td>
+            <td>Виннипег Джетс</td>
+        </tr>
+        <tr>
+            <td>Эндрю Копп</td>
+            <td>81</td>
+            <td>384</td>
+            <td>США</td>
+            <td>Нападающий</td>
+            <td>Нью-Йорк Рейнджерс</td>
+        </tr>
+        <tr>
+            <td>Алекс Голигоски</td>
+            <td>85</td>
+            <td>917</td>
+            <td>США</td>
+            <td>Защитник</td>
+            <td>Миннесота Уайлд</td>
+        </tr>
+        <tr>
+            <td>Брейди Ткачук</td>
+            <td>99</td>
+            <td>282</td>
+            <td>США</td>
+            <td>Нападающий</td>
+            <td>Оттава Сенаторз</td>
+        </tr>
+        <tr>
+            <td>Морган Райли</td>
+            <td>69</td>
+            <td>580</td>
+            <td>Канада</td>
+            <td>Защитник</td>
+            <td>Торонто Мэйпл Лифс</td>
+        </tr>
+        <tr>
+            <td>Том Уилсон</td>
+            <td>115</td>
+            <td>525</td>
+            <td>Канада</td>
+            <td>Нападающий</td>
+            <td>Вашингтон Кэпиталс</td>
+        </tr>
+        
+    </table>
+        

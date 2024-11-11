@@ -1,0 +1,123 @@
+
+
+body { 
+    font-family: Arial, sans-serif;
+    padding: 3vw;
+}
+
+.container {
+    width: 100%;
+}
+
+
+.header {
+    background-color: #ccc;
+    padding: 1vw;
+    overflow: hidden; 
+}
+
+.header h3 {
+    float: left; 
+    font-size: 2vw;
+    color: black;
+    margin: 0;
+    padding-left: 1vw;
+}
+
+.menu {
+    float: right; 
+    text-align: center;
+    margin-top: 3vw;
+    
+}
+.menu-item {
+    text-decoration: none;
+
+}
+
+.menu-item.active {
+    color: red;
+    text-decoration: none;
+
+}
+
+
+.image-section {
+    display: inline-block;
+    width: 100%;
+    margin: 2vw 0;
+    text-align: center;
+}
+
+.image {
+    display: inline-block;
+    width: 20vw; 
+    height: 160px;
+    margin: 0 1vw; 
+    vertical-align: top; 
+}
+
+.image-down {
+    margin-top: 2vw; 
+    vertical-align: middle; 
+}
+
+
+
+.content {
+    width: 100%;              
+    overflow: hidden;          
+    text-align: center;        
+}
+
+.content-item {
+    float: left;               
+    width: 46%;                
+    background-color: #f9f9f9; 
+    padding: 2vw;              
+    margin: 1vw;               
+    text-align: center;        
+    box-sizing: border-box;    
+    vertical-align: top;       
+    
+}
+
+.content-item h2 {
+    font-size: 3vw;            
+    margin-bottom: 1vw;        /* Отступ снизу для заголовка */
+}
+
+
+.profile-link {
+    display: inline-block;
+    color: black;
+    margin-bottom: 1vw;/* отступ для картинки */
+    text-align: center; 
+    text-decoration: none;
+}
+
+.profile-img {
+    display: block;
+    width: 8vw;
+    height: auto;
+    margin: 0 auto 1.5vw auto; /* Центр изображение  и добавляет отступ снизу */
+}
+
+
+footer {
+    width: 100%;
+    padding: 2vw 0;
+    border-top: 1px solid #000000;
+    font-weight: bold;
+    overflow: hidden; 
+}
+
+.footer-left {
+    float: left;          
+    padding-left: 2vw;    
+}
+
+.footer-right {
+    float: right;         /* с правой стороны */
+    padding-right: 2vw;   
+}
